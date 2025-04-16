@@ -28,7 +28,7 @@ export class SnackManagerComponent {
 
   addSnack() {
     if (this.newSnack.trim()) {
-      this.snacks.push({ id: Date.now(), name: this.newSnack, amount: 0 });
+      this.snacks.push({ id: this.snacks.length, name: this.newSnack, amount: 0 });
       this.snackService.saveSnacks(this.snacks);
       this.newSnack = '';
     }

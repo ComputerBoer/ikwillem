@@ -5,9 +5,9 @@
         <ul class="mt-4">
             <li *ngFor="let snack of snacks" class="flex justify-between items-center bg-yellow-300 p-4 mt-2 rounded-full">
                 
-                <span class="text-lg">
+                <span class="text-lg flex flex-row">
                     <button (click)="removeSnack(snack.id)"
-                    class=" text-red-500 px-2 py-1 rounded-full ">
+                    class=" text-red-500 px-2  rounded-full ">
                     X
                   </button>
                     {{ snack.name }}
