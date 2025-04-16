@@ -16,7 +16,15 @@ export class SnackService {
 
   getSnacks(): Snack[] {
     if (isPlatformServer(this.platformId))  return []
-    return JSON.parse(localStorage.getItem(this.storageKey) || '[]');
+    let snacks =JSON.parse(localStorage.getItem(this.storageKey)|| '[]')
+
+    if(snacks.length ===0){
+      snacks.push({ id: Date.now(), name: "Frikandel", amount: 0 })
+      snacks.push({ id: Date.now(), name: "Kroket", amount: 0 })
+      snacks.push({ id: Date.now(), name: "Kipnuggets", amount: 0 })
+    }
+
+    return  snacks
   }
 
   saveSnacks(snacks: Snack[]): void {

@@ -33,14 +33,16 @@ export class SnackManagerComponent {
       this.newSnack = '';
     }
   }
+  removeSnack(id: number) {
+    const snack = this.snacks.find(s => s.id === id);
+    if (snack && confirm(`Weet je zeker dat je "${snack.name}" wilt verwijderen?`)) {
+      this.snacks = this.snacks.filter(s => s.id !== id);
+      this.snackService.saveSnacks(this.snacks);
+    }
+  }
 
   clearSnackAmounts() {
     this.snacks.forEach(snack => snack.amount = 0);
-    this.snackService.saveSnacks(this.snacks);
-  }
-
-  removeSnack(id: number) {
-    this.snacks = this.snacks.filter(s => s.id !== id);
     this.snackService.saveSnacks(this.snacks);
   }
 
