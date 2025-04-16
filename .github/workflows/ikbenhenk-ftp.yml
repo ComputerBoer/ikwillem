@@ -36,7 +36,7 @@ jobs:
         server: ${{ vars.FTP_SERVER }}
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./dist/browswe/
+        local-dir: ./dist/browser/
         server-dir: ${{ vars.FTP_ANGULAR_DIRECTORY }}
         dangerous-clean-slate: true
 
