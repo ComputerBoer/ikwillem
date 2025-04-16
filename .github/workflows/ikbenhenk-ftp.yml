@@ -3,11 +3,11 @@ name: Ik ben Henk angular ftp deploy
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:
-      - main
+      - master
 
 jobs:
   web-deploy:
