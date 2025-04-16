@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { SnackManagerComponent } from './snack-manager/snack-manager.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [SnackManagerComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
