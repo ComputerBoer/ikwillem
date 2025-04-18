@@ -19,9 +19,9 @@ export class SnackService {
     let snacks =JSON.parse(localStorage.getItem(this.storageKey)|| '[]')
 
     if(snacks.length ===0){
-      snacks.push({ id: 1, name: "Frikandel", amount: 0 })
-      snacks.push({ id: 2, name: "Kroket", amount: 0 })
-      snacks.push({ id: 3, name: "Kipnuggets", amount: 0 })
+      snacks.push({ id: 0, name: "Frikandel", amount: 0 })
+      snacks.push({ id: 1, name: "Kroket", amount: 0 }) 
+      snacks.push({ id: 2, name: "Kipnuggets", amount: 0 })
     }
 
     return  snacks
